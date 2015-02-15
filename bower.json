@@ -19,6 +19,7 @@
     "angular"
   ],
   "ignore": [
+    "test",
     "**/.*"
   ],
   "dependencies": {

@@ -1,4 +1,4 @@
-
+// Taken from JsFiddle: http://jsfiddle.net/RobAnderson/v9yLauzh/4/
 (function(){
     'use strict';
 
