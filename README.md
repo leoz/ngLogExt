@@ -1,1 +1,4 @@
-# ngLogExt
+ngLogExt
+=============
+
+Extended Angular logging

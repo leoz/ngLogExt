@@ -1,0 +1,27 @@
+{
+  "name": "nglogext",
+  "main": "ng-logext.js",
+  "version": "0.0.1",
+  "homepage": "https://github.com/leoz/ngLogExt",
+  "authors": [
+    "Rob Anderson (@iotaweb)",
+    "Leonid Zolotarev <leoz@yahoo.com>"
+  ],
+  "description": "Extended Angular logging",
+  "moduleType": [
+    "globals"
+  ],
+  "keywords": [
+    "ngLogExt",
+    "ng-logext",
+    "ng-logext.js",
+    "angularjs",
+    "angular"
+  ],
+  "ignore": [
+    "**/.*"
+  ],
+  "dependencies": {
+    "angular": "~1"
+  }
+}
