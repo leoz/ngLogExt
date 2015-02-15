@@ -1,6 +1,6 @@
 /*
     Extended Angular logging
-    Author: Rob Anderson (@iotaweb)
+    Authors: Rob Anderson (@iotaweb), Leonid Zolotarev <leoz@yahoo.com>
     Adds ability to turn on/off all logging messages
     Adds abiity to specify logging levels
     Adds support for console.table()
@@ -94,7 +94,7 @@
                         locals.$scope.controllerName = constructor;
                     }
                 }
-                return $delegate(constructor, locals);
+                return $delegate.apply($delegate, arguments);
             }
         });
 
