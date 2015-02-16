@@ -33,7 +33,7 @@
         .module('ngLogExt', [])
         .constant('DEBUG', true)
         .constant('LEVELS', ['debug','log','info','warn','error','table'])
-        .config(logging);
+        .config(['$logProvider', '$provide', 'DEBUG', 'LEVELS', logging]);
 
 
     function logging ($logProvider, $provide, DEBUG, LEVELS) {
@@ -43,7 +43,7 @@
         var padContext = true;                  // use consistent width for context
         var contextWidth = 10;                  // set width of context
 
-        $provide.decorator('$log', function ($delegate) {
+        $provide.decorator('$log', ['$delegate', function($delegate) {
 
             // add support for console.table()
             $delegate.table = function () {
@@ -80,10 +80,10 @@
                 return loggingFuncs;
             };
             return $delegate;
-        });
+        }]);
 
 
-        $provide.decorator('$controller', function ($delegate) {
+        $provide.decorator('$controller', ['$delegate', function($delegate) {
 
             return function(constructor, locals) {
 
@@ -96,7 +96,7 @@
                 }
                 return $delegate.apply($delegate, arguments);
             }
-        });
+        }]);
 
 
         function formatLog (loggingFunc, timestamp, context) {
